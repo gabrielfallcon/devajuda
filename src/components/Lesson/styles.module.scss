@@ -1,0 +1,35 @@
+.dateLesson {
+  color: #8D8D99;
+}
+.contentLesson {
+  border-radius: 4px;
+  border: 1px solid #323238;
+  padding: 24px;
+  margin-top: 8px;
+}
+.headerLesson {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.statusLessionActive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #81D8F7;
+  font-weight: 600;
+}
+.statusLessionBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #FBA94C;
+  font-weight: 600;
+}
+.infoLesson {
+  margin-top: 20px;
+  color: #C4C4CC;
+}
