@@ -1,11 +1,19 @@
 .dateLesson {
   color: #8D8D99;
 }
+.contentFullLesson {
+  &:hover {
+    .contentLesson {
+      border: 1px solid #00875F;
+    }
+  }
+}
 .contentLesson {
   border-radius: 4px;
   border: 1px solid #323238;
   padding: 24px;
   margin-top: 8px;
+  transition: 0.2s;
 }
 .headerLesson {
   display: flex;

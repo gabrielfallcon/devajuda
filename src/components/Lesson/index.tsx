@@ -2,6 +2,7 @@ import styles from './styles.module.scss';
 import { CheckCircle, Lock } from 'phosphor-react';
 import { isPast, format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import Link from 'next/link';
 
 interface LessonProps {
   title: string;
@@ -17,31 +18,33 @@ export function Lesson(props: LessonProps) {
   });
 
   return (
-    <a href="#">
-      <span className={styles.dateLesson}>
-        {availableDateFormatted}
-      </span>
+    <Link href={`${props.slug}`}>
+      <a className={styles.contentFullLesson}>
+        <span className={styles.dateLesson}>
+          {availableDateFormatted}
+        </span>
 
-      <div className={styles.contentLesson}>
-        <header className={styles.headerLesson}>
-          {isLessonAvailable ? (
-            <span className={styles.statusLessionActive}>
-              <CheckCircle size={20}/>
-              Aula Liberada
-            </span>
-          ) : (
-            <span className={styles.statusLessionBlock}>
-              <Lock size={20}/>
-              Em breve
-            </span>
-          )}
-        </header>
+        <div className={styles.contentLesson}>
+          <header className={styles.headerLesson}>
+            {isLessonAvailable ? (
+              <span className={styles.statusLessionActive}>
+                <CheckCircle size={20}/>
+                Aula Liberada
+              </span>
+            ) : (
+              <span className={styles.statusLessionBlock}>
+                <Lock size={20}/>
+                Em breve
+              </span>
+            )}
+          </header>
 
 
-        <strong className={styles.infoLesson}>
-          {props.title}
-        </strong>
-      </div>
-    </a>
+          <strong className={styles.infoLesson}>
+            {props.title}
+          </strong>
+        </div>
+      </a>
+    </Link>
   )
 }
